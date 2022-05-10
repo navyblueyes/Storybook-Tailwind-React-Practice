@@ -2,6 +2,63 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Steps to get started...
+
+### Yarn
+`npm install --global yarn`
+
+### Create-React-App + TS
+`yarn create react-app caferio --template typescript`
+`yarn add typescript @types/node @types/react @types/react-dom @types/jest`
+
+### Add Storybook
+`npx sb init`
+
+### Add TailwindCSS
+`yarn install -D tailwindcss postcss autoprefixer`
+`yarn tailwindcss init -p`
+
+### Update `tailwind.config.js`
+```
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+### Add Tailwind to CSS ...  `./src/index.css`
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### Updating ...  `/tsconfig.json`
+```
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "types": ["color-convert"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    ...
+  }
+}
+```
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
